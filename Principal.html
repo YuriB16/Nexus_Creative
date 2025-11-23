@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Principal - Nexus Creative</title>
+    <link rel="stylesheet" href="Principal.css" />
+    <link rel="shortcut icon" href="Logo/Nexus Creative.png" type="image/x-icon" />
+</head>
+
+<body>
+<header>
+    <img src="Logo/Logotipo Geométrico em Preto e Branco.png" alt="Logo Nexus Creative" width="200" height="150">
+
+    <nav class="nav-desktop" aria-label="Navegação Principal">
+        <ul>
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Equipe.html">Equipe</a></li>
+            <li><a href="divulgue.html">Divulgue</a></li>
+            <li><a href="Principal.html" class="active">Página Principal</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-acoes">
+        <div class="Entrar desktop-acoes">
+            <a href="Entrar.html">Entrar</a>
+        </div>
+        <div class="Cadastro desktop-acoes">
+            <a href="Cadastro.html">Cadastre-se</a>
+        </div>
+        
+        <button id="toggle-tema" aria-label="Alternar Tema">🌙</button>
+
+        <button id="toggle-menu" aria-label="Abrir Menu">☰</button>
+    </div>
+</header>
+
+<div id="mobile-menu">
+    <nav aria-label="Navegação Secundária">
+        <ul>
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Equipe.html">Equipe</a></li>
+            <li><a href="divulgue.html">Divulgue</a></li>
+            <li><a href="Principal.html">Página Principal</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-botoes">
+         <div class="Entrar mobile-entrar">
+            <a href="Entrar.html">Entrar</a>
+        </div>
+        <div class="Cadastro mobile-cadastro">
+            <a href="Cadastro.html">Cadastre-se</a>
+        </div>
+    </div>
+</div>
+
+<nav class="categorias" aria-label="Categorias de Propagandas">
+    <ul id="lista-categorias">
+        <li class="ativo" data-cat="todas">🔎 Todas</li>
+        <li data-cat="alimentacao">🍔 Alimentação</li>
+        <li data-cat="moda">👟 Moda</li>
+        <li data-cat="tecnologia">📱 Tecnologia</li>
+        <li data-cat="bebidas">☕ Bebidas</li>
+        <li data-cat="servicos">🏠 Serviços</li>
+        <li data-cat="beleza">💄 Beleza</li>
+        <li data-cat="entretenimento">🎮 Entretenimento</li>
+        <li data-cat="saude">🩺 Saúde</li>
+        <li data-cat="automotivo">🚗 Automotivo</li>
+    </ul>
+</nav>
+
+<main class="feed" id="feed">
+
+    <article class="card-propaganda" data-categoria="alimentacao">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Cocacola.png" alt="Logo Coca-Cola">
+                <h3>Coca-Cola</h3>
+            </div>
+            <img class="card-img" src="Logo/Cocacolaimg.png" alt="Propaganda Coca-Cola">
+            <p class="descricao">Refresque-se com o sabor inconfundível da Coca-Cola!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="alimentacao">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/McDonalds.png" alt="Logo McDonald's">
+                <h3>McDonald's</h3>
+            </div>
+            <img class="card-img" src="Logo/Mcdonaldsimg.png" alt="Propaganda McDonald's">
+            <p class="descricao">Novo Big Tasty Turbo — mais sabor e mais suculento!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="moda">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Nike.png" alt="Logo Nike">
+                <h3>Nike</h3>
+            </div>
+            <img class="card-img" src="Logo/Nikeimg.png" alt="Tênis Nike AirMax Pro">
+            <p class="descricao">AirMax Pro — estilo e tecnologia avançada.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="tecnologia">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Samsung.png" alt="Logo Samsung">
+                <h3>Samsung</h3>
+            </div>
+            <img class="card-img" src="Logo/SamsungBanner.png" alt="Samsung Galaxy S25 Ultra">
+            <p class="descricao">Galaxy S25 Ultra — o futuro em suas mãos.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="bebidas">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Starbucks.png" alt="Logo Starbucks">
+                <h3>Starbucks</h3>
+            </div>
+            <img class="card-img" src="Logo/StarbucksBanner.png" alt="Bebida Caramel Cold Brew">
+            <p class="descricao">Caramel Cold Brew — irresistível!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="servicos">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Ifood.png" alt="Logo iFood">
+                <h3>iFood</h3>
+            </div>
+            <img class="card-img" src="Logo/IfoodBanner.png" alt="Propaganda iFood">
+            <p class="descricao">Entrega grátis nos seus restaurantes favoritos!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="beleza">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Loreal.png" alt="Logo L'Oréal Paris">
+                <h3>L'Oréal Paris</h3>
+            </div>
+            <img class="card-img" src="Logo/LorealBanner.png" alt="Produto L'Oréal Sérum">
+            <p class="descricao">Sérum vitaminado — pele renovada em 7 dias!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="entretenimento">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/Netflix.png" alt="Logo Netflix">
+                <h3>Netflix</h3>
+            </div>
+            <img class="card-img" src="Logo/NetflixBanner.png" alt="Série Fronteira Sombria">
+            <p class="descricao">A nova série “Fronteira Sombria” está dominando!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="automotivo">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/BMW.png" alt="Logo BMW">
+                <h3>BMW</h3>
+            </div>
+            <img class="card-img" src="Logo/BMWBanner.png" alt="Carro BMW i8 Sport">
+            <p class="descricao">BMW i8 Sport — potência híbrida futurista.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="saude">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/saude.png" alt="Logo Vita+ Saúde">
+                <h3>Vita+ Saúde</h3>
+            </div>
+            <img class="card-img" src="Logo/saudeBanner.png" alt="Propaganda Vita+ Saúde">
+            <p class="descricao">Cuide da sua saúde com nossos planos premium.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="moda">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/adidas.png" alt="Logo Adidas">
+                <h3>Adidas</h3>
+            </div>
+            <img class="card-img" src="Logo/adidasBanner.png" alt="Nova Coleção Adidas">
+            <p class="descricao">Nova coleção esportiva 2025.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="bebidas">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/pepsi.png" alt="Logo Pepsi">
+                <h3>Pepsi</h3>
+            </div>
+            <img class="card-img" src="Logo/pepsiBanner.png" alt="Propaganda Pepsi Max">
+            <p class="descricao">Pepsi Max — máximo sabor, zero açúcar.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="entretenimento">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/prime.png" alt="Logo Prime Video">
+                <h3>Prime Video</h3>
+            </div>
+            <img class="card-img" src="Logo/primeBanner.png" alt="Propaganda Prime Video">
+            <p class="descricao">Filmes e séries exclusivos.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="moda">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/puma.png" alt="Logo Puma">
+                <h3>Puma</h3>
+            </div>
+            <img class="card-img" src="Logo/pumaBanner.png" alt="Camisas Puma DryFit">
+            <p class="descricao">Camisas esportivas com tecnologia DryFit.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="servicos">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/uber.png" alt="Logo Uber">
+                <h3>Uber</h3>
+            </div>
+            <img class="card-img" src="Logo/uberBanner.png" alt="Propaganda Uber">
+            <p class="descricao">Chegue ao destino com segurança.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="tecnologia">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/apple.png" alt="Logo Apple">
+                <h3>Apple</h3>
+            </div>
+            <img class="card-img" src="Logo/appleBanner.png" alt="iPhone 16 Pro">
+            <p class="descricao">iPhone 16 Pro — desempenho supremo.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="automotivo">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/audi.png" alt="Logo Audi">
+                <h3>Audi</h3>
+            </div>
+            <img class="card-img" src="Logo/audiBanner.png" alt="Audi RS7">
+            <p class="descricao">Audi RS7 — o ápice da performance.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="saude">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/unimed.png" alt="Logo Unimed">
+                <h3>Unimed</h3>
+            </div>
+            <img class="card-img" src="Logo/unimedBanner.png" alt="Propaganda Unimed">
+            <p class="descricao">Planos de saúde completos.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="bebidas">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/redbull.png" alt="Logo Red Bull">
+                <h3>Red Bull</h3>
+            </div>
+            <img class="card-img" src="Logo/redbullBanner.png" alt="Propaganda Red Bull">
+            <p class="descricao">Red Bull te dá asas!</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+    <article class="card-propaganda" data-categoria="entretenimento">
+        <div class="card-conteudo">
+            <div class="card-header">
+                <img src="Logo/disney.png" alt="Logo Disney+">
+                <h3>Disney+</h3>
+            </div>
+            <img class="card-img" src="Logo/disneyBanner.png" alt="Propaganda Disney+">
+            <p class="descricao">As melhores animações em um só lugar.</p>
+        </div>
+        <menu class="acoes">
+            <button class="btn-curtir">❤️ Curtir</button>
+            <button class="btn-comentar">💬 Comentar</button>
+            <button>🔁 Compartilhar</button>
+        </menu>
+    </article>
+
+</main>
+
+<footer>
+    <div class="footer-contato">
+        <img src="Logo/Logotipo Geométrico em Preto e Branco.png" alt="Nexus Creative" width="250" height="200">
+    </div>
+
+    <p>&copy; 2025 NexusCreative - Todos os direitos Reservados</p>
+</footer>
+
+<script>
+// ------------------------------------
+    // SCRIPT DE TEMA (Original Corrigido)
+    // ------------------------------------
+    const botaoTema = document.getElementById("toggle-tema");
+    
+    // Verifica o tema ao carregar
+    if (localStorage.getItem("tema") === "light") {
+        document.body.classList.add("light");
+        botaoTema.textContent = "☀️";
+    } else {
+        // Garante que o ícone escuro esteja correto se não houver tema ou for 'dark'
+        botaoTema.textContent = "🌙"; 
+    }
+    
+    botaoTema.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+        if (document.body.classList.contains("light")) {
+            botaoTema.textContent = "☀️";
+            localStorage.setItem("tema", "light");
+        } else {
+            botaoTema.textContent = "🌙";
+            localStorage.setItem("tema", "dark");
+        }
+    });
+
+ // ------------------------------------
+    // NOVO: SCRIPT MENU HAMBURGUER (Corrigido)
+    // ------------------------------------
+    const botaoMenu = document.getElementById("toggle-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    botaoMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+        
+        // Altera o ícone do hamburguer para 'X' ao abrir/fechar
+        if (mobileMenu.classList.contains("active")) {
+            botaoMenu.textContent = "✕"; 
+            // Opcional: Ocultar o botão de tema no mobile quando o menu está aberto
+            botaoTema.style.visibility = 'hidden'; 
+
+        } else {
+            botaoMenu.textContent = "☰";
+            botaoTema.style.visibility = 'visible';
+        }
+    });
+
+    // Ajusta a visibilidade dos elementos ao redimensionar (apenas para corrigir se o menu estava aberto)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 600) {
+            mobileMenu.classList.remove('active');
+            botaoMenu.textContent = '☰';
+            botaoTema.style.visibility = 'visible'; // Garante que o tema volte a ser visível no desktop
+        }
+    });
+
+    // Ajusta visibilidade do botão hamburguer ao redimensionar
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 600) {
+            mobileMenu.classList.remove('active');
+            botaoMenu.textContent = '☰';
+            botaoMenu.style.display = 'none';
+            desktopNav.style.display = 'flex';
+            desktopAcoes.forEach(el => el.style.display = 'flex');
+            botaoTema.style.display = 'flex';
+        } else {
+            botaoMenu.style.display = 'block';
+            desktopNav.style.display = 'none';
+            desktopAcoes.forEach(el => el.style.display = 'none');
+        }
+    });
+
+    // Força a ocultação inicial dos elementos de mobile no desktop
+    if (window.innerWidth > 600) {
+        botaoMenu.style.display = 'none';
+    }
+
+
+    // ------------------------------------
+    // SCRIPT DE FILTRO DE CATEGORIAS (Original)
+    // ------------------------------------
+    const categorias = document.querySelectorAll(".categorias li");
+    const cards = document.querySelectorAll(".card-propaganda");
+    const feed = document.getElementById("feed");
+
+    // Função para filtrar
+    categorias.forEach(cat => {
+        cat.addEventListener("click", () => {
+
+            // Remove classe ativa
+            categorias.forEach(c => c.classList.remove("ativo"));
+            cat.classList.add("ativo");
+
+            const categoriaSelecionada = cat.getAttribute("data-cat");
+            let algumVisivel = false;
+
+            cards.forEach(card => {
+                const categoriaCard = card.getAttribute("data-categoria");
+
+                // Verifica se deve mostrar
+                if (categoriaSelecionada === "todas" || categoriaCard === categoriaSelecionada) {
+                    card.style.display = "block";
+                    card.style.animation = "fadeUp .45s ease-out";
+                    algumVisivel = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Remove mensagem antiga
+            const mensagemExistente = document.querySelector(".sem-resultados");
+            if (mensagemExistente) mensagemExistente.remove();
+
+            // Nenhum card encontrado
+            if (!algumVisivel) {
+                const msg = document.createElement("div");
+                msg.classList.add("sem-resultados");
+                msg.textContent = "Nenhuma propaganda encontrada nesta categoria.";
+                feed.appendChild(msg);
+            }
+        });
+    });
+
+    // ------------------------------------
+    // SCRIPT DE AÇÕES (Curtir/Comentar) (Original)
+    // ------------------------------------
+    
+    // Função CURTIR
+    document.querySelectorAll(".acoes .btn-curtir").forEach(btn => {
+        btn.addEventListener("click", () => {
+            // Simplificando o texto dos botões de ação do card (para caber melhor)
+            const curtidoTexto = "❤️ 1";
+            const curtirTexto = "❤️ Curtir";
+
+            if (!btn.classList.contains("curtido")) {
+                btn.classList.add("curtido");
+                btn.innerHTML = curtidoTexto;
+            } else {
+                btn.classList.remove("curtido");
+                btn.innerHTML = curtirTexto;
+            }
+        });
+    });
+
+    // Função COMENTAR
+    document.querySelectorAll(".acoes .btn-comentar").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const comentario = prompt("Digite seu comentário:");
+            if (comentario) {
+                alert("Comentário enviado!");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

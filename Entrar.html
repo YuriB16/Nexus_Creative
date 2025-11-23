@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Nexus Creative</title>
+    <link rel="stylesheet" href="Entrar.css">
+    <link rel="shortcut icon" href="Logo/Nexus Creative.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Fundo animado -->
+    <canvas id="particles"></canvas>
+
+    <div class="container">
+        <div class="login-card">
+            <img src="Logo/Nexus Creative.png" alt="Logo Nexus Creative" class="logo">
+            <h2>Bem-vindo de volta!</h2>
+            <p>Entre para continuar explorando as melhores propagandas.</p>
+
+            <form id="formLogin">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <p id="erroLogin" class="erro-msg"></p>
+
+                <button type="submit" class="btn-entrar">Entrar</button>
+
+                <div class="extra">
+                    <a href="#">Esqueceu a senha?</a>
+                    <p>Não tem uma conta? <a href="Cadastro.html">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Alerta de sucesso -->
+    <div id="alertaSucesso" class="alerta-sucesso">
+        <h3>✅ Login bem-sucedido!</h3>
+        <p>Bem-vindo de volta à Nexus Creative!</p>
+    </div>
+
+    <script src="particles.js"></script>
+    <script>
+        const form = document.getElementById('formLogin');
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+        const erroLogin = document.getElementById('erroLogin');
+        const alertaSucesso = document.getElementById('alertaSucesso');
+
+        // Simulação de login (poderia ser trocado por integração com servidor)
+        const usuariosCadastrados = [
+            { email: "teste@nexus.com", senha: "123456" },
+            { email: "admin@nexus.com", senha: "admin123" }
+        ];
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const emailVal = email.value.trim();
+            const senhaVal = senha.value.trim();
+            const usuario = usuariosCadastrados.find(u => u.email === emailVal && u.senha === senhaVal);
+
+            if (usuario) {
+                erroLogin.style.display = 'none';
+                alertaSucesso.classList.add('ativo');
+
+                setTimeout(() => {
+                    alertaSucesso.classList.remove('ativo');
+                    form.reset();
+                    // Redireciona para página principal
+                    window.location.href = "Home.html";
+                }, 2500);
+            } else {
+                erroLogin.textContent = "❌ E-mail ou senha incorretos!";
+                erroLogin.style.display = 'block';
+                senha.classList.add('erro');
+            }
+        });
+
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focado');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focado');
+            });
+        });
+
+        formLogin.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    // Aqui você pode trocar por validação real
+    if (email && senha) {
+        // Salva sessão do usuário
+        localStorage.setItem("usuarioLogado", "true");
+
+        // Redireciona para o painel
+        window.location.href = "dashboard.html"; 
+    }
+});
+
+    </script>
+</body>
+</html>

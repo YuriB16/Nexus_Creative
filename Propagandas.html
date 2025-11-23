@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Propagandas - Nexus Creative</title>
+    <link rel="shortcut icon" href="Logo/Nexus Creative.png" type="image/x-icon">
+    <link rel="stylesheet" href="Propagandas.css">
+</head>
+<body>
+
+<header>
+    <img src="Logo/Logotipo Geométrico em Preto e Branco.png" alt="Logo Nexus Creative" class="logo-desktop" width="200" height="150">
+
+    <nav class="nav-desktop" aria-label="Navegação Principal">
+        <ul>
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Equipe.html">Equipe</a></li>
+            <li><a href="divulgue.html">Divulgue</a></li>
+            <li><a href="Principal.html">Página Principal</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-acoes">
+        <div class="Entrar desktop-acoes">
+            <a href="Index.html" id="logoutBtn">Sair</a>
+        </div>
+        
+        <button id="toggle-tema" aria-label="Alternar Tema">🌙</button>
+
+        <button id="toggle-menu" aria-label="Abrir Menu">☰</button>
+    </div>
+</header>
+
+<div id="mobile-menu">
+    <nav aria-label="Navegação Secundária">
+        <ul>
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Equipe.html">Equipe</a></li>
+            <li><a href="divulgue.html">Divulgue</a></li>
+            <li><a href="Principal.html">Página Principal</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-botoes">
+         <div class="Entrar mobile-entrar">
+             <a href="Index.html" id="logoutBtnMobile">Sair</a>
+         </div>
+    </div>
+</div>
+
+<div class="painel">
+    <h1>Gerenciar Propagandas</h1>
+    <p>Envie, edite ou exclua anúncios para o site.</p>
+
+    <div class="card-upload">
+        <h2>✨ Criar Novo Anúncio</h2>
+        
+        <label for="adTitle">Título do Anúncio (Máx. 50 caracteres)</label>
+        <input type="text" id="adTitle" maxlength="50" placeholder="Ex: Grande Oferta de Verão">
+
+        <label for="adUrl">Link de Destino (URL)</label>
+        <input type="url" id="adUrl" placeholder="https://www.seusite.com.br/oferta">
+
+        <label for="adCategory">Categoria</label>
+        <select id="adCategory">
+            <option value="padrao">-- Selecione a Categoria --</option>
+            <option value="tecnologia">Tecnologia</option>
+            <option value="moda">Moda</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="servicos">Serviços</option>
+            <option value="outros">Outros</option>
+        </select>
+
+        <label for="adImage">Imagem (JPG, PNG, WebP)</label>
+        <input type="file" id="adImage" accept="image/png, image/jpeg, image/webp">
+        
+        <label for="adText">Descrição Curta (Máx. 150 caracteres)</label>
+        <textarea id="adText" maxlength="150" placeholder="Breve descrição da propaganda."></textarea>
+        
+        <button onclick="addAd()">Adicionar Propaganda</button>
+    </div>
+
+    <h2 class="titulo-lista">Propagandas Cadastradas</h2>
+    <div id="adList" class="lista-propagandas">
+        <div class="card-ad">
+            <img src="Logo/RedBullBanner.png" alt="Exemplo de Propaganda">
+            <div class="meta">
+                <h3>Título do Anúncio Exemplo</h3>
+                <p class="ad-link">Link: <a href="#">https://seu.link/destino</a></p>
+                <p class="ad-category">Categoria: Tecnologia</p>
+                <p class="ad-description">Breve descrição da propaganda que aparece no painel.</p>
+            </div>
+            <div class="actions">
+                <button class="btn-editar">✏️ Editar</button>
+                <button class="btn-excluir">🗑️ Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-contato">
+        <img src="Logo/Logotipo Geométrico em Preto e Branco.png" alt="Nexus Creative" width="250px" height="200px">
+    </div>
+    <p>&copy; <strong>2025 NexusCreative - Todos os direitos Reservados</strong></p>
+</footer>
+
+<script>
+    // Scripts de tema e menu (mantidos)
+    const botaoTema = document.getElementById("toggle-tema");
+    if (localStorage.getItem("tema") === "light") {
+        document.body.classList.add("light");
+        botaoTema.textContent = "☀️";
+    }
+    botaoTema.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+        botaoTema.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+        localStorage.setItem("tema", document.body.classList.contains("light") ? "light" : "dark");
+    });
+
+    const botaoMenu = document.getElementById("toggle-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    botaoMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+        botaoMenu.textContent = mobileMenu.classList.contains("active") ? "✕" : "☰";
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+            mobileMenu.classList.remove('active');
+            botaoMenu.textContent = '☰';
+        }
+    });
+
+    // É necessário ter o arquivo dashboard.js para a função addAd() funcionar.
+    // Exemplo de função mock, caso você não a tenha:
+    function addAd() {
+        alert("Função 'Adicionar Propaganda' acionada! Implemente a lógica no dashboard.js para salvar os dados.");
+    }
+</script>
+<script src="dashboard.js"></script>
+</body>
+</html>
